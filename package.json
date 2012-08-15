@@ -17,13 +17,13 @@
   },
   "dependencies": {
     "grunt": "0.3.11",
-    "grunt-contrib": "0.0.8",
+    "grunt-contrib": "0",
     "grunt-jasmine-task": "0.2.0",
 
     "requirejs": "2.0.2",
     "express": "2.5.11",
 
-    "stylus": "0.28.2"
+    "stylus": "0.29.0"
   },
   "devDependencies": {
     "grunt": "~0.3.11"

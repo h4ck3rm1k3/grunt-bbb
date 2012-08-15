@@ -25,6 +25,16 @@ cd grunt-bbb
 # Update all the submodules recursively.
 git submodule update --init --recursive
 
+
+# Check out grunt-contrib 
+cd ${HOME}/experiments/node 
+git clone https://github.com/gruntjs/grunt-contrib.git
+sudo npm install -g 
+
+Now link that checked out directly into the grunt-contrib
+ln -s  ${HOME}/experiments/node/grunt-contrib/ ${HOME}/experiments/node/grunt-bbb/node_modules/grunt-contrib
+see https://github.com/h4ck3rm1k3/grunt-bbb/issues/1.
+
 # Allow bbb to be globally accessible.
 sudo npm link
 ```
