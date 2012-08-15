@@ -102,9 +102,9 @@ module.exports = function(grunt) {
       end = end || " ";
 
       if (!start) {
-        return Array(len+1).join(Array(3).join(end));
+        return new Array(len+1).join(new Array(3).join(end));
       } else {
-        return Array(len+1).join(start + Array(2).join(end));
+        return new Array(len+1).join(start + new Array(2).join(end));
       }
     }
 
@@ -119,12 +119,10 @@ module.exports = function(grunt) {
 
           _.each(val, function(val, i) {
             if (_.isString(val)) {
-              if (i == len-1) {
-                tree.push("\u2502 " + spaces(depth+1, "\u2500", "\u2514") + " "
-                  + val);
+              if (i === len-1) {
+                tree.push("\u2502 " + spaces(depth+1, "\u2500", "\u2514") + " "  + val);
               } else {
-                tree.push("\u2502 " + spaces(depth+1, "\u2500", "\u251c") + " "
-                  + val);
+                tree.push("\u2502 " + spaces(depth+1, "\u2500", "\u251c") + " "  + val);
               }
             } else if (_.isObject(val)) {
               traverse(obj, depth+1);
